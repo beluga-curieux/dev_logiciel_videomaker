@@ -1,28 +1,4 @@
-import datetime
-import time
 import os
-
-class Point:
-    def __init__(self, x, y, timescale):
-        self.__x = x
-        self.__y = y
-        self.__timescale = timescale
-
-    def get_x(self):
-        return self.__x
-
-    def get_y(self):
-        return self.__y
-
-    def get_timescale(self):
-        return self.__timescale
-
-class Timescale:
-    def __init__(self,time_start):
-        self.__time = time_start
-
-    def get_time(self):
-        return self.__time
 
 class FilePath:
     def __init__(self, file_path):
@@ -78,17 +54,3 @@ class FilePath:
             print("write_in_file error :", err)
 
             return False
-
-if __name__ == '__main__':
-
-    fichier = FilePath("maman")
-
-    P1 = Point(4,4, Timescale(1))
-    P2 = Point(8, 44, Timescale(7))
-    P3 = Point(465, 94, Timescale(8))
-    P4 = Point(7, 99, Timescale(188))
-
-    listeP = [P1,P2,P3,P4]
-    cvs = fichier.convert_to_csv(listeP)
-    fichier.export_to_csv(cvs)
-    print(cvs)
