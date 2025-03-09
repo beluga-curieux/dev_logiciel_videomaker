@@ -25,6 +25,7 @@ class FilePath:
                 and self.write_in_file(data_csv) ):
 
             return False
+        return True
 
     def check_repertory_path(self) -> bool:
         directory = os.path.dirname(self.__file_path)
