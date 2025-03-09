@@ -28,6 +28,9 @@ class FilePath:
     def __init__(self, file_path):
         self.__file_path = file_path
 
+    def __str__(self):
+        return self.__file_path
+
     def convert_to_csv(self, points):
         text_csv = ''
         for i in range(len(points)):
