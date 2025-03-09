@@ -4,6 +4,9 @@ class FilePath:
     def __init__(self, file_path):
         self.__file_path = file_path
 
+    def __str__(self):
+        return self.__file_path
+
     def convert_to_csv(self, points):
         text_csv = ''
         for i in range(len(points)):
@@ -18,7 +21,7 @@ class FilePath:
 
     def export_to_csv(self, data_csv:str):
         if not (self.check_repertory_path()
-                and  (not self.file_allready_exist())
+                and (not self.file_allready_exist())
                 and self.write_in_file(data_csv) ):
 
             return False
